@@ -2,6 +2,12 @@
 	width: 960px;
 	margin: 0 auto;
 	}
+	#header {
+		display: block;
+		width: 960px;
+		height: 168px;
+		max-height: 168px;
+	}
 	.content {
 		float: left;
 		width: 600px;

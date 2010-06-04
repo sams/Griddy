@@ -7,6 +7,7 @@
 <script type='text/javascript' src='griddy.js'></script> 
 <script type='text/javascript'> 
 $(document).ready(function(){
+	$('#header').griddy({columns:12,columngutter:20,opacity:25,color:'#dda5e2', fHeight: true});
 	$('.content').griddy({columns:4,columngutter:20,opacity:30,color:'#ffb1b1'});
 	$('.sidebar').griddy({rows:20,rowheight:110});
 });
@@ -15,6 +16,9 @@ $(document).ready(function(){
  
 <body> 
 <div class="body">
+	<div id="header">
+		<h1>Sam Sherlock</h1>
+	</div>
 	<div class="content">
 
 		<h1>Griddy: Fast and Simple Grid Overlay Plugin for JQuery</h1>

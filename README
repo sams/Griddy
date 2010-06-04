@@ -1,5 +1,6 @@
 Plugin Name: Griddy
 Author: Monjurul Dolon, http://mdolon.com/
+Modified: Sam Sherlock, http://samsherlock.com/
 More Information: http://devgrow.com/griddy-overlay
 
 Griddy is a small JQuery plugin thats creates a simple, customizable
@@ -19,3 +20,5 @@ few options, including:
     * opacity (0-100, default = 30)
 
 The plugin is released under GPL, MIT and BSD licenses - free for any use!
+
+    * slight refactor of griddy we can have more methods get/set go!!
