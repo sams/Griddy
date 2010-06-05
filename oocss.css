@@ -120,3 +120,9 @@ body{_text-align:center;}/* IE5.5 */
 .yahoo{width:240px;}
 .myYahoo{width:300px;}
 
+/* unstopable ninja elastic images */
+
+.elastcMedia img,
+.elastcMedia object {
+	max-width: 100%;
+}
