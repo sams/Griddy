@@ -100,12 +100,16 @@
     </div>
 
     <div class="rightCol installation">
-      
-	  <code>
+	<h2>Traditional Markup inclusion of Griddy</h2>
+	  <h3>Insert Griddy into you head</h3>
+	<code>
 		<pre>
-		&lt;script src="http://sams.github.com/Griddy/griddy.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://sams.github.com/Griddy/griddy.min.js" type="text/javascript"&gt;&lt;/script&gt;
 		</pre>
-	  </code>
+	</code>
+
+	<h3>jQuery on ready setup of griddy defining a grid for selected element</h3>
+
 	  <code>
 		<pre>$('.element').griddy(
 			rows: 10,
@@ -119,6 +123,8 @@
 		}
 		</pre>
 	  </code>
+	  <h2>Griddy Bookmarklet (may be buggy - use Mdolon version for now)</h2>
+	  <a href="javascript:(function(){var head=document.getElementsByTagName('head')[0],script=document.createElement('script');script.type='text/javascript';script.src='http://sams.github.com/Griddy/griddy-bookmarklet.js?' + Math.floor(Math.random()*99999);head.appendChild(script);})(); void 0">Your Bookmarklet Name</a>
     </div>
 	<div class="main">
     <p>http://devgrow.com/griddy-overlay/</p><h2>Dependencies</h2>
