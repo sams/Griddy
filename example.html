@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 		<h1>Griddy: Fast and Simple Grid Overlay Plugin for JQuery</h1>
 		<p><strong>Griddy</strong> is a simple JQuery plugin that overlays a customizable grid over any element.  The current options and defaults are:
-		<pre><code>$('.element').griddy(
+		<pre><code>$('.element').griddy({
 	rows: 10,
 	rowheight: 0,
 	rowgutter: 20,
@@ -32,7 +32,7 @@ $(document).ready(function(){
 	columngutter: 20,
 	color: '#ccc', 
 	opacity: 30
-	}
+	});
 		</pre></code>
 		Use the default <code>0</code> for rowheight or columnheight to make Griddy calculate the column width and row height automatically.
 		</p>
