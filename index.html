@@ -111,7 +111,7 @@
 	<h3>jQuery on ready setup of griddy defining a grid for selected element</h3>
 
 	  <code>
-		<pre>$('.element').griddy(
+		<pre>$('.element').griddy({
 			rows: 10,
 			rowheight: 0,
 			rowgutter: 20,
@@ -120,11 +120,12 @@
 			columngutter: 20,
 			color: '#ccc', 
 			opacity: 30
-		}
+		});
 		</pre>
 	  </code>
 	  <h2>Griddy Bookmarklet (may be buggy - use Mdolon version for now)</h2>
-	  <a href="javascript:(function(){var head=document.getElementsByTagName('head')[0],script=document.createElement('script');script.type='text/javascript';script.src='http://sams.github.com/Griddy/griddy-bookmarklet.js?' + Math.floor(Math.random()*99999);head.appendChild(script);})(); void 0" style="cursor: hand" title="apply griddy overlay to current page body">griddy</a>
+	  <p><a href="javascript:(function(){var head=document.getElementsByTagName('head')[0],script=document.createElement('script');script.type='text/javascript';script.src='http://sams.github.com/Griddy/griddy-bookmarklet.js?' + Math.floor(Math.random()*99999);head.appendChild(script);})(); void 0" style="cursor: hand" title="apply griddy overlay to current page body">griddy</a></p>
+	  <p>Thanks to <a href="http://www.latentmotion.com/">Brett Barros</a> for the <a href="http://www.latentmotion.com/how-to-create-a-jquery-bookmarklet/">tutorial on making jQuery bookmarklet</a></p>
     </div>
 	<div class="main">
     <p>http://devgrow.com/griddy-overlay/</p><h2>Dependencies</h2>
