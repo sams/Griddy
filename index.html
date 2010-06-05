@@ -8,50 +8,119 @@
 	<title>sams/Griddy @ GitHub</title>
 	
 	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #c8dfde;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
+		@import 'oocss.min.css';
 		h1 { font-size: 3.8em; color: #372021; margin-bottom: 3px; }
 		h1 .small { font-size: 0.4em; }
 		h1 a { text-decoration: none }
 		h2 { font-size: 1.5em; color: #372021; }
-    h3 { text-align: center; color: #372021; }
-    a { color: #372021; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
+		h3 { text-align: center; color: #372021; }
+		a { color: #372021; }
+		.description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+		.download { float: right; }
+		.download a { display: inline-block; }
+		.main,.rightCol, leftCol {
+			display: block;
+		}
+		.installation { width: 360px; }
+			pre { background: #000; color: #fff; padding: 15px;}
+		hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+		#footer { text-align:center; padding-top:30px; font-style: italic; }
 	</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+		<script src="http://sams.github.com/Girddy/griddy.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#header').griddy({
+				rows: 3,
+				rowheight: 0,
+				rowgutter: 20,
+				columns: 6,
+				columnheight: 0,
+				columngutter: 20,
+				color: '#c8c4e6', 
+				opacity: 5
+			});
+			$('.head').griddy({
+				rows: 3,
+				rowheight: 0,
+				rowgutter: 20,
+				columns: 3,
+				columnheight: 0,
+				columngutter: 20,
+				color: '#dec4e6', 
+				opacity: 20
+			});
+			$('.main').griddy({
+				rows: 10,
+				rowheight: 0,
+				rowgutter: 20,
+				columns: 6,
+				columnheight: 0,
+				columngutter: 20,
+				color: '#c7bddf', 
+				opacity: 30
+			});
+			$('.leftCol, .rightCol').griddy({
+				rows: 5,
+				rowheight: 0,
+				rowgutter: 20,
+				columns: 4,
+				columnheight: 0,
+				columngutter: 20,
+				color: '#c764e9', 
+				opacity: 30
+			});
+		});
+		</script>
 	
 </head>
 
 <body>
   <a href="http://github.com/sams/Griddy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+  <div class="page">
+	<div id="header" class="head">
+		<h1>Griddy a simple script that overlays a defined grid to select page elements</h1>
+		<h2>Simple, effective and above all usable</h2>
+		<div class="download">
+		  <a href="http://github.com/sams/Griddy/zipball/master">
+			<img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+		  <a href="http://github.com/sams/Griddy/tarball/master">
+			<img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+		</div>
+	</div>
 
-    <div class="download">
-      <a href="http://github.com/sams/Griddy/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/sams/Griddy/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+	<div class="body">
 
     <h1><a href="http://github.com/sams/Griddy">Griddy</a>
       <span class="small">by <a href="http://github.com/sams">sams</a></span></h1>
 
-    <div class="description">
+    <div class="main description">
       Griddy is a small JQuery plugin thats creates a simple, customizable overlay on top of any element.  It can also calculate row heights and column widths automatically based on number of rows/columns and gutter space.
     </div>
 
+    <div class="rightCol installation">
+      
+	  <code>
+		<pre>
+		&lt;script src="http://sams.github.com/Griddy/griddy.min.js" type="text/javascript"&gt;&lt;/script&gt;
+		</pre>
+	  </code>
+	  <code>
+		<pre>$('.element').griddy(
+			rows: 10,
+			rowheight: 0,
+			rowgutter: 20,
+			columns: 4,
+			columnheight: 0,
+			columngutter: 20,
+			color: '#ccc', 
+			opacity: 30
+		}
+		</pre>
+	  </code>
+    </div>
+	<div class="main">
     <p>http://devgrow.com/griddy-overlay/</p><h2>Dependencies</h2>
 <p>jquery</p>
 <h2>Install</h2>
@@ -72,9 +141,11 @@
       by running:
       <pre>$ git clone git://github.com/sams/Griddy</pre>
     </p>
+	</div>
+	</div>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/sams/Griddy">sams/Griddy</a>
+    <div id="footer" class="foot">
+      <p>get the source code on GitHub : <a href="http://github.com/sams/Griddy">sams/Griddy</a></p>
     </div>
 
   </div>
