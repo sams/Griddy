@@ -1,67 +1,87 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"> 
-<head profile="http://gmpg.org/xfn/11"> 
-<title>Quick Grid Overlay with CSS and JQuery</title>
-<link rel="stylesheet" href="basic-styling.css" type="text/css" />
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js?ver=2.9.2'></script> 
-<script type='text/javascript' src='griddy-redux.js'></script>
-<script type='text/javascript' src='builder.js'></script>
-<script type='text/javascript'> 
-$(document).ready(function(){
-	$('#header').griddy({columns:12,columngutter:20,opacity:25,color:'#dda5e2', fHeight: true});
-	$('.content').griddy({columns:4,columngutter:20,opacity:30,color:'#ffb1b1'});
-	$('.sidebar').griddy({rows:20,rowheight:110});
-});
-</script> 
-</head> 
+<!doctype html>  
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>HTML5 Demo using some Boilerplate Ideology</title>
+
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="basic-styling.css?v=1">
+
  
-<body> 
-<div class="body">
-	<div id="header">
-		<h1>Sam Sherlock</h1>
-	</div>
-	<div class="content">
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="http://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
 
-		<h1>Griddy: Fast and Simple Grid Overlay Plugin for JQuery</h1>
-		<p><strong>Griddy</strong> is a simple JQuery plugin that overlays a customizable grid over any element.  The current options and defaults are:
-		<pre><code>$('.element').griddy({
-	rows: 10,
-	rowheight: 0,
-	rowgutter: 20,
-	columns: 4,
-	columnheight: 0,
-	columngutter: 20,
-	color: '#ccc', 
-	opacity: 30
-	});
-		</pre></code>
-		Use the default <code>0</code> for rowheight or columnheight to make Griddy calculate the column width and row height automatically.
-		</p>
-		<h4>Dummy Content</h4>
+</head>
 
+<body>
+
+	<header class="grid grid2" data-grid="rows:2,rowheight:64,rowgutter:20,columns:12,columnheight:148,columngutter:20,color:#fd5151,opacity:65,fHeight:168">
+		<h1>Dummy Content</h1>
+	</header>
+
+	<article class="grid grid3" data-grid="opacity:30,columns:7,color:#451239">
+		<h2>Some more stuffs here for the Interwebs</h2>
+		
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nisi a justo dictum cursus. Phasellus velit est, pulvinar quis varius nec, tincidunt ut nulla. Nam mi sem, posuere ut tempor eget, rhoncus vitae massa. Aenean ultrices sodales nisl ut fermentum. Duis non lorem metus. Mauris at metus risus. Nulla est tortor, iaculis eu accumsan eu, convallis et risus. Duis leo dolor, porta sit amet fringilla eget, commodo vel lorem. Nam metus libero, tristique a volutpat in, egestas in nisi. Duis vulputate venenatis sapien nec vulputate.</p>
 		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
 		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
 		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
 		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
 		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+		
+		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+		
+		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
+	</article>
+	
+	<aside class="grid grid4" data-grid="color:#223483,opacity:75,columns:3">
+	    <section>
+	    	<h2>Off we go</h2>
+	    	<ol>
+		<li>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</li>
+		<li>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</li>
+		<li>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</li>
+		<li>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</li>
+		<li>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</li>
+		
+		<li>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</li>
+	    	</ol>
+	    </section>
+	</aside>
+	
+	<footer class="grid grid5" data-grid="rows:1,color:#fd3493,opacity:65">
+		 <small>some thing tiny weeny </small>
+	</footer>
 
-		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
-		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
-		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
-		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
-		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
 
-		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
-		<p>Vivamus ullamcorper dapibus massa egestas hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam bibendum hendrerit viverra. Pellentesque eu gravida orci. Quisque suscipit dolor non eros porttitor sodales. Cras ultrices, tortor et rutrum blandit, libero est venenatis risus, porta commodo mauris nunc a odio. Curabitur porttitor velit quis quam mattis egestas. Pellentesque aliquam sollicitudin est ac tempor. Vestibulum eleifend leo sed justo laoreet iaculis fermentum id justo.</p>
-	</div>
-	<div class="sidebar">
-		<h2>Copyright And Licensing</h2>
-		<p>This code is released under MIT, BSD, and GPL Licenses.  Do with it as you please!</p>
-		<h2>About the Developer</h2>
+  <!-- Javascript at the bottom for fast page loading -->
 
-		<p>Griddy was written by <a href="http://mdolon.com/">Monjurul Dolon</a> of <a href="http://devgrow.com/">DevGrow</a>.  You can read more about this plugin on <a href="http://devgrow.com/griddy-overlay">this blog post</a>.</p>
-	</div>
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
-</body> 
+
+  <script src="griddy-redux.js?v=1"></script>
+  <script src="builder.js?v=1"></script>
+  <script>
+	$(document).ready(function()	{
+		//$('article').griddy({columns:4,columngutter:20,opacity:30,color:'#ffb1b1'});
+		//$('aside').griddy({rows:20,rowheight:110});
+		//
+		$('body').buildGrids({ 'gClass': 'grid' });
+	});
+  </script>
+  
+</body>
 </html>

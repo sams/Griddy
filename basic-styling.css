@@ -1,18 +1,32 @@
-.body {
+body {
 	width: 960px;
 	margin: 0 auto;
 	}
-	#header {
+	#header,
+	header {
 		display: block;
 		width: 960px;
 		height: 168px;
 		max-height: 168px;
 	}
-	.content {
+	.content,
+	article,
+	#header,
+	header,
+	.sidebar,
+	aside,
+	#footer,
+	footer {
+		overflow: hidden;
+	}
+	.content,
+	article,
+	footer {
 		float: left;
-		width: 600px;
+		width: 633px;
 		}
-	.sidebar {
+	.sidebar,
+	aside {
 		float: right;
-		width: 300px;
+		width: 307px;
 		}
